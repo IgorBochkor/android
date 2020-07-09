@@ -5,7 +5,7 @@ public class Coin {
     private int rank;
     private String name;
     private long marketCap;
-    private String Simbol;
+    private String simbol;
     private double priceUsd;
     private double percent24h;
 
@@ -13,7 +13,7 @@ public class Coin {
         this.rank = rank;
         this.name = name;
         this.marketCap = marketCap;
-        Simbol = simbol;
+        this.simbol = simbol;
         this.priceUsd = priceUsd;
         this.percent24h = percent24h;
     }
@@ -31,7 +31,7 @@ public class Coin {
     }
 
     public String getSimbol() {
-        return Simbol;
+        return simbol;
     }
 
     public double getPriceUsd() {

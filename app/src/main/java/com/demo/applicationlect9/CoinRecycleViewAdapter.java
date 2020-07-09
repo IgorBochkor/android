@@ -21,7 +21,9 @@ public class CoinRecycleViewAdapter extends RecyclerView.Adapter<CoinRecycleView
     @NonNull
     @Override
     public CoinViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View  itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_coin, parent, false);
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        View itemView = layoutInflater.inflate(R.layout.item_coin, parent,false);
+//        View  itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_coin, parent, false);
         return new CoinViewHolder(itemView);
     }
 
