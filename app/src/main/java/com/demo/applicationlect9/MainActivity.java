@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         final RecyclerView recyclerView = findViewById(R.id.recycleView);
 //        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        CoinDataSource dataSource = new CoinDataSource(getApplicationContext());
+        CoinDataSource dataSource = new CoinDataSource();
         dataSource.load(new CoinDataSource.ResultCallback() {
             @Override
             public void onResult(List<Coin> coins) {

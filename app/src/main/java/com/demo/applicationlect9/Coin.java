@@ -1,13 +1,31 @@
 package com.demo.applicationlect9;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "coins")
 public class Coin {
 
     private int rank;
     private String name;
+    @ColumnInfo(name = "market_cap")
     private long marketCap;
+
+    @PrimaryKey
+    @NonNull
     private String simbol;
+
+    @ColumnInfo(name = "price_usd")
     private double priceUsd;
+
+    @ColumnInfo(name = "percent_24h")
     private double percent24h;
+
+    @Ignore
+    private boolean favorite = false;
 
     public Coin(int rank, String simbol,String name, long marketCap,  double priceUsd, double percent24h) {
         this.rank = rank;
@@ -40,5 +58,37 @@ public class Coin {
 
     public double getPercent24h() {
         return percent24h;
+    }
+
+    public boolean isFavorite() {
+        return favorite;
+    }
+
+    public void setRank(int rank) {
+        this.rank = rank;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setMarketCap(long marketCap) {
+        this.marketCap = marketCap;
+    }
+
+    public void setSimbol(String simbol) {
+        this.simbol = simbol;
+    }
+
+    public void setPriceUsd(double priceUsd) {
+        this.priceUsd = priceUsd;
+    }
+
+    public void setPercent24h(double percent24h) {
+        this.percent24h = percent24h;
+    }
+
+    public void setFavorite(boolean favorite) {
+        this.favorite = favorite;
     }
 }
