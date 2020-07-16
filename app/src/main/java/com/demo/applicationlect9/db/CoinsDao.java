@@ -3,6 +3,7 @@ package com.demo.applicationlect9.db;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import com.demo.applicationlect9.Coin;
@@ -15,7 +16,7 @@ public interface CoinsDao {
     @Insert
     void insert(Coin coin);
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(List<Coin> coin);
 
     @Delete

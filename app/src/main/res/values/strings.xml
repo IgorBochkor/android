@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ApplicationLect9</string>
+    <string name="get_tutorial_complite">tutorial_complite</string>
+    <string name="pref_category_main">my_preference</string>
+    <string name="pref_key_first_launch">first_launch_time</string>
+    <string name="pref_key_launch_number">launch_number</string>
+    <string name="pref_key_rated_us">rated_us</string>
 </resources>

@@ -38,7 +38,8 @@ public class CoinDataSource {
         coins.add(new Coin(5,"NTC13","Mycoin",200500200l, 500.0, 75));
 
         App.get().db.getCoinDao().insertAll(coins);
+        List<Coin> all = App.get().db.getCoinDao().getAll();
 
-        resultCallback.onResult(coins);
+        resultCallback.onResult(all);
     }
 }
